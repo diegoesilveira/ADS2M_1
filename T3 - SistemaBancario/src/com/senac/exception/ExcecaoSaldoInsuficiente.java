@@ -4,7 +4,7 @@ public class ExcecaoSaldoInsuficiente extends Exception {
 	
 	private static final long serialVersionUID = 1908205134200180144L;
 
-	public SaldoInsuficienteException () {
+	public ExcecaoSaldoInsuficiente () {
 		
 		super ("Saldo Insuficiente");
 	
