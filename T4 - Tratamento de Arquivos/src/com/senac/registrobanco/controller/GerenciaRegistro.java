@@ -15,17 +15,17 @@ import com.senac.bank.account.Especial;
 import com.senac.bank.account.Investimento;
 import com.senac.bank.exceptions.SaldoInsuficienteException;
 import com.senac.bank.system.Manager;
-import com.senac.registrobanco.view.View;
+import com.senac.registrobanco.view.BancoView;
 
 /**
  * Gerencia registros bancários, adiciona, atualiza, e registra estas informações em arquivos.
  * 
- * @author diego
+ * @author Danti
  */
 
 public class GerenciaRegistro {
 
-	private View consoleView;
+	private BancoView consoleView;
 	private Scanner contacts; 
 	private Scanner bankRegisters;
 	private Formatter registers; 
@@ -38,7 +38,7 @@ public class GerenciaRegistro {
 	 */
 	public GerenciaRegistro() throws IOException, FileNotFoundException
 	{
-		consoleView = new View();
+		consoleView = new BancoView();
 		contacts = new Scanner ( new BufferedReader( new FileReader( "Contacts.txt") ) );
 		bankRegisters = new Scanner ( new BufferedReader( new FileReader( "Registers.txt") ) );
 		registers = new Formatter( new BufferedWriter ( new FileWriter( "Registers.txt", true ) ) );

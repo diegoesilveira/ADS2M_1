@@ -16,9 +16,9 @@ public class GerenciaRegistroApp {
 			gerenciaRegistro = new GerenciaRegistro();
 		} 
 		catch (FileNotFoundException e) {
-			System.out.println("Arquivo não encontrado.");
+			System.out.println("File not found.");
 		} catch (IOException e) {
-			System.out.println( "Erro para abrir o arquivo." );
+			System.out.println( "I/O failed." );
 		}
 		
 		if (gerenciaRegistro != null) {
@@ -30,7 +30,7 @@ public class GerenciaRegistroApp {
 				gerenciaRegistro.updateBankRegisters();
 			} 
 			catch (FileNotFoundException e) {
-				System.out.println( "Arquivo não encontrado." );
+				System.out.println( "File not found." );
 			}
 		}
 		

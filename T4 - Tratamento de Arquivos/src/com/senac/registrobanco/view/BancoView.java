@@ -2,7 +2,7 @@ package com.senac.registrobanco.view;
 
 import com.senac.bank.console.BankConsole;
 
-public class View extends BankConsole{
+public class BancoView extends BankConsole{
 
 	public void printDividendsOperation()
 	{

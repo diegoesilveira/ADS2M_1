@@ -10,13 +10,13 @@ import java.util.FormatterClosedException;
 import com.senac.PraticaOOP.Controler;
 import com.senac.util.Pessoa;
 
-public class Contatos {
+public class GerenciaContatos {
 	
 	private Controler contactsController;
 	private Formatter writer;
 	private BankConsole printer;
 
-	public Contatos() throws IOException, FileNotFoundException
+	public GerenciaContatos() throws IOException, FileNotFoundException
 	{
 		contactsController 	= new Controler();
 		printer				= new BankConsole();
