@@ -3,16 +3,16 @@ package com.senac.contatos.apps;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import com.senac.contatos.controller.GerenciaContatos;
+import com.senac.contatos.controller.Contatos;
 
-public class GerenciaContatosApp {
+public class ContatosApp {
 
 	public static void main(String[] args) {
-		GerenciaContatos gerenciaContatos = null;
+		Contatos gerenciaContatos = null;
 		
 		try 
 		{
-			gerenciaContatos = new GerenciaContatos();
+			gerenciaContatos = new Contatos();
 		} 
 		catch (FileNotFoundException e) 
 		{
