@@ -6,13 +6,13 @@ public class BancoView extends BankConsole{
 
 	public void printDividendsOperation()
 	{
-		System.out.println( "3 - Operacao Dividendos" );
+		System.out.println( "3 - Dividendos" );
 	}
 	
 	public void printMenu()
 	{
-		System.out.println( "### MENU ###"
-				+ "\n1 - Operacao deposito"
-				+ "\n2 - Operacao retirar" );
+		System.out.println( " -----MENU----- "
+				+ "\n1 - Deposito"
+				+ "\n2 - Retirar" );
 	}
 }
