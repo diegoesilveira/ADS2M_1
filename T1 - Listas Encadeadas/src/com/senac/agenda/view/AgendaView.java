@@ -10,16 +10,16 @@ public class AgendaView {
 		System.out.println(valor);
 	}
 
-	public void showMessage(String message) {
-		System.out.println(message);
+	public void mostraMensagem(String messagem) {
+		System.out.println(messagem);
 	}
 
-	public void showPrompt(String prompt) {
-		System.out.print(prompt+": ");
+	public void mostraTela(String tela) {
+		System.out.print(tela+": ");
 	}
 
-	public String LeString(String prompt) {
-		showPrompt(prompt);
+	public String LeString(String tela) {
+		mostraTela(tela);
 		return LeString();
 	}
 	
@@ -27,6 +27,10 @@ public class AgendaView {
 		return teclado.nextLine();
 	}
 	
+	public String gravaString(String mensagem) {
+		mostraTela(mensagem);
+		return gravaString();
+	}
 
 	
 	
