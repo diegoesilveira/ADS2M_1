@@ -1,6 +1,6 @@
 package com.senac.agenda.model;
 
-public class Pessoa implements Comparable<Pessoa>{
+public class Pessoa{
 	
 	private String Nome, Telefone;
 	
@@ -32,10 +32,7 @@ public class Pessoa implements Comparable<Pessoa>{
 	}
 
 
-	@Override
-	public int compareTo(Pessoa arg0) {
-		return Nome.compareTo(arg0.getNome());
-		
-	}
+	
+	
 
 }
