@@ -1,7 +1,5 @@
 package com.senac.agenda.estruturas;
 
-import com.senac.estruturas.Nodo;
-
 public class AgendaListaEncadeada <T>{
 	
 	protected Nodo<T> head;
@@ -18,6 +16,8 @@ public class AgendaListaEncadeada <T>{
 		if(head!= null)
 			head.setPrevious(novo);
 		head=novo;
+		if (tail == null)
+			tail = novo;
 		
 	}
 	
