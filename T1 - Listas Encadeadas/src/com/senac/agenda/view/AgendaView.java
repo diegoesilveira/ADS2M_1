@@ -29,7 +29,7 @@ public class AgendaView {
 	
 	public String gravaString(String mensagem) {
 		mostraTela(mensagem);
-		return gravaString();
+		return gravaString(mensagem);
 	}
 
 	
