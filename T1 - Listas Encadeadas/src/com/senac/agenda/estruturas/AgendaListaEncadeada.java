@@ -3,15 +3,15 @@ package com.senac.agenda.estruturas;
 
 public class AgendaListaEncadeada <T>{
 	
-	protected Nodo<T> inicioLista;
-	protected Nodo<T> fimLista;
+	private Nodo<T> inicioLista; //variavel inicioLista que armazena a posição do inicio da lista
+	private Nodo<T> fimLista; //variavel fimLista armazena a posição do fim da lista
 	
-	public AgendaListaEncadeada() {
-		inicioLista = null;
+	public AgendaListaEncadeada() {  //construtor inicializando as variaveis como nulas
+		inicioLista = null;  
 		fimLista = null;
 	}
 	
-	public void inserir(Nodo<T> novo){
+	public void inserir(Nodo<T> novo){  
 		
 		novo.setAvanca(inicioLista);
 		if(inicioLista!= null)
@@ -38,7 +38,7 @@ public class AgendaListaEncadeada <T>{
 		}
 	}
 	
-	public void append(Nodo<T> novo)
+	public void anexar(Nodo<T> novo)
 	{
 		if (fimLista != null) {
 			fimLista.setAvanca(novo);

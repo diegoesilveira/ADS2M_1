@@ -25,7 +25,7 @@ package com.senac.agenda.estruturas;
 			this.data = data;
 		}
 
-		public Nodo<T> getAvanca() {
+		public Nodo<T> getAvanca() {  
 			return avanca;
 		}
 
