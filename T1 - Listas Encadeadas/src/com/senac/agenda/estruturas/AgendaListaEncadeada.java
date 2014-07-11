@@ -3,60 +3,60 @@ package com.senac.agenda.estruturas;
 
 public class AgendaListaEncadeada <T>{
 	
-	protected Nodo<T> head;
-	protected Nodo<T> tail;
+	protected Nodo<T> inicioLista;
+	protected Nodo<T> fimLista;
 	
 	public AgendaListaEncadeada() {
-		head = null;
-		tail = null;
+		inicioLista = null;
+		fimLista = null;
 	}
 	
 	public void inserir(Nodo<T> novo){
 		
-		novo.setAvanca(head);
-		if(head!= null)
-			head.setPrevious(novo);
-		head=novo;
-		if (tail == null)
-			tail = novo;
+		novo.setAvanca(inicioLista);
+		if(inicioLista!= null)
+			inicioLista.setPrevious(novo);
+		inicioLista=novo;
+		if (fimLista == null)
+			fimLista = novo;
 		
 	}
 	
 	public void inserir(Nodo<T> novo, Nodo<T> anterior)
 	{
 		if (anterior == null) {
-			novo.setAvanca(head);
-			head = novo;
-			if (tail == null)
-				tail = head;
+			novo.setAvanca(inicioLista);
+			inicioLista = novo;
+			if (fimLista == null)
+				fimLista = inicioLista;
 		} else {
 			novo.setAvanca(anterior.getAvanca());
 			novo.setPrevious(anterior);
 			anterior.setAvanca(novo);
-			if (anterior == tail)
-				tail = novo;
+			if (anterior == fimLista)
+				fimLista = novo;
 		}
 	}
 	
 	public void append(Nodo<T> novo)
 	{
-		if (tail != null) {
-			tail.setAvanca(novo);
-			novo.setPrevious(tail);
+		if (fimLista != null) {
+			fimLista.setAvanca(novo);
+			novo.setPrevious(fimLista);
 		} else {
-			head = novo;
+			inicioLista = novo;
 		}
-		tail = novo;
+		fimLista = novo;
 	}
 	
 	public Nodo<T> getTail()
 	{
-		return tail;
+		return fimLista;
 	}
 	
-	public Nodo<T> getHead()
+	public Nodo<T> getInicioLista()
 	{
-		return head;
+		return inicioLista;
 	}
 
 	public void remove(Nodo<T> nodo) {
@@ -65,11 +65,11 @@ public class AgendaListaEncadeada <T>{
 		if (anterior != null)
 			anterior.setAvanca(avanca);
 		else
-			head = avanca;
+			inicioLista = avanca;
 		if (avanca != null)
 			avanca.setPrevious(anterior);
 		else
-			tail = anterior;
+			fimLista = anterior;
 	}
 
 	
