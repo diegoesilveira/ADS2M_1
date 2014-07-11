@@ -6,7 +6,7 @@ package com.senac.agenda.estruturas;
 		private Nodo<T> avanca;
 		private Nodo<T> anterior;
 		
-		public Nodo()   //construtor setado valores nulos para as variaveis
+		public Nodo()   
 		{
 			data = null;
 			avanca = null;
